@@ -3,14 +3,15 @@
 
 <!-- Side Nav Menu -->
 <mat-sidenav-container class="mainnav">
-  <mat-sidenav #sidenav mode="side" closed>
+  <mat-sidenav #sidenav mode="side" opened>
+    
     <p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="main-content">
       <div>
-        Stuff
         <router-outlet></router-outlet>
+        Stuff
       </div>
     </div>
   </mat-sidenav-content>
