@@ -1,16 +1,21 @@
-<div class="toolbar">
+<!-- Header -->
+<app-header></app-header>
 
-</div>
-
+<!-- Side Nav Menu -->
 <mat-sidenav-container class="mainnav">
-  <mat-sidenav #sidenav mode="side" opened>
+  <mat-sidenav #sidenav mode="side" closed>
     <p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
-
-    Stuff
   </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="main-content">
+      <div>
+        Stuff
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
 </mat-sidenav-container>
 
 
 <p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
 
-<router-outlet></router-outlet>
