@@ -2,6 +2,15 @@
 
 </div>
 
+<mat-sidenav-container class="mainnav">
+  <mat-sidenav #sidenav mode="side" opened>
+    <p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
 
+    Stuff
+  </mat-sidenav>
+</mat-sidenav-container>
+
+
+<p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
 
 <router-outlet></router-outlet>
