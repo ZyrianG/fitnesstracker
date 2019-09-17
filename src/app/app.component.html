@@ -1,22 +1,28 @@
-<!-- Header -->
-<app-header></app-header>
+<div class="app-container">
+  <!-- Header -->
+  <app-header></app-header>
 
-<!-- Side Nav Menu -->
-<mat-sidenav-container class="mainnav">
-  <mat-sidenav #sidenav mode="side" opened>
-    
-    <p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="main-content">
-      <div>
-        <router-outlet></router-outlet>
-        Stuff
+  <!-- Side Nav Menu -->
+  <mat-sidenav-container class="mainnav">
+    <mat-sidenav #sidenav mode="side" closed>
+      <p><button mat-button (click)="sidenav.toggle()">Home</button></p>
+      <p><button mat-button (click)="sidenav.toggle()">User</button></p>
+      <p><button mat-button (click)="sidenav.toggle()">Training</button></p>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="main-content">
+        <div>
+          <router-outlet></router-outlet>
+          Stuff
+          <p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
+        </div>
       </div>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 
+  <footer>
+    <p>Footer Things</p>
+  </footer>
 
-<p><button mat-button (click)="sidenav.toggle()">Toggle Nav</button></p>
-
+</div>

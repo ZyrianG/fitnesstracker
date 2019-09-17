@@ -1,1 +1,33 @@
-@import 'bootstrap'
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Raleway&display=swap');
+
+$main-font:     'Noto Sans', sans-serif;
+$sec-font:      'Raleway', sans-serif;
+$main-color:    #191347;
+
+.app-container {
+    display: grid;
+    font-family: $sec-font;
+    grid-template-areas: 
+                        "header header"
+                        "nav main"
+                        "footer footer";
+    grid-template-rows: 10% 80vh 10%;
+}
+
+app-header {
+    grid-area: header;
+}
+
+.mainnav {
+    grid-area: nav;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: $main-color;
+}
+
+footer {
+    grid-area: footer;
+}
